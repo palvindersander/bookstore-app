@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.bookstore.palvindersingh">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity
+            android:name="com.bookstore.palvindersingh.mainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.bookstore.palvindersingh.logInActivity" />
+        <activity android:name="com.bookstore.palvindersingh.homeActivity" />
+        <activity android:name="com.bookstore.palvindersingh.detailsActivity" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <activity android:name="com.bookstore.palvindersingh.noNetworkActivity" />
+        <activity
+            android:name="com.bookstore.palvindersingh.scanBookActivity"
+            android:parentActivityName="com.bookstore.palvindersingh.homeActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.bookstore.palvindersingh.homeActivity" />
+            <meta-data
+                android:name="com.google.firebase.ml.vision.DEPENDENCIES"
+                android:value="barcode" />
+        </activity>
+        <activity
+            android:name="com.bookstore.palvindersingh.addBookActivity"
+            android:parentActivityName="com.bookstore.palvindersingh.scanBookActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.bookstore.palvindersingh.scanBookActivity" />
+        </activity>
+        <activity
+            android:name="com.bookstore.palvindersingh.addBookManualActivity"
+            android:parentActivityName="com.bookstore.palvindersingh.scanBookActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.bookstore.palvindersingh.scanBookActivity" />
+        </activity>
+        <activity
+            android:name="com.bookstore.palvindersingh.viewBookActivity"
+            android:parentActivityName="com.bookstore.palvindersingh.homeActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.bookstore.palvindersingh.homeActivity" />
+        </activity>
+        <activity
+            android:name="com.bookstore.palvindersingh.viewSearchBookActivity"
+            android:parentActivityName="com.bookstore.palvindersingh.homeActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.bookstore.palvindersingh.homeActivity" />
+        </activity>
+    </application>
+
+</manifest>

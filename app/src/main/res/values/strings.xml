@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">bookstore</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="logoutActionBar">logout</string>
+    <string name="no_network">no network</string>
+    <string name="search">search</string>
+    <string name="books">books</string>
+    <string name="home">home</string>
+    <string name="isbn">ISBN</string>
+    <string name="scan">scan</string>
+    <string name="swipe_down_to_refresh">swipe down to refresh</string>
+    <string name="title">title</string>
+    <string name="enter_these_details">enter these details</string>
+    <string name="year_group">year group</string>
+    <string name="form_room">form room</string>
+    <string name="submit">submit</string>
+    <string name="enter_your_date_of_birth">enter your date of birth</string>
+    <string name="scanned_book">scanned book</string>
+    <string name="is_this_your_book">is this your book?</string>
+    <string name="title_caps">TITLE</string>
+    <string name="author_caps">AUTHOR</string>
+    <string name="genre_caps">GENRE</string>
+    <string name="scanned">scanned</string>
+    <string name="loaned">loaned</string>
+    <string name="renting">renting</string>
+    <string name="restart">restart</string>
+    <string name="authors">authors</string>
+    <string name="genres">genres</string>
+    <string name="results">results</string>
+    <string name="market">market</string>
+</resources>

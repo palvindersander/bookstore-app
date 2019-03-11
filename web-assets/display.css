@@ -1,0 +1,213 @@
+/*@keyframes huechange {
+    from {filter: hue-rotate(0deg);
+    }
+    to {filter: hue-rotate(360deg);
+    }
+}*/
+
+@keyframes overlayview {
+    0% {opacity: 1; height: 100vh; width: 100vw;
+    }
+    75% {opacity: 1; height: 100vh; width: 100vw;
+    }
+    100% {opacity: 0; display: none; height: 100vh; width: 100vw;
+    }
+}
+
+body{
+  padding: 0px;
+  margin: 0px;
+  background-color: #FFF;
+  transition: 1s;
+}
+
+body:hover{
+  background-color: #FFF;
+}
+
+body:hover > header{
+  filter: blur(0px) grayscale(0%);
+  height: 100vh;
+  width: 100vw;
+  margin-top: 0;
+}
+
+header{
+  height: 75vh;
+  width: 75vw;
+  /*background-image: url(bg.jpg);*/
+  background-color: #FFF;
+  background-size: cover;
+  background-position: center;
+  filter: blur(10px) grayscale(100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0px;
+  transition: 1s;
+  margin: auto;
+  margin-top: 12.5vh;
+}
+
+header:hover > div{
+  animation: pulse 1s;
+  animation-delay: .5s;
+  display: block;
+}
+
+header:hover > a > img{
+  opacity: 0.5;
+  transition: .5s;
+  height: 150px;
+}
+
+header > div{
+  background-color: #F3F3F3;
+  padding: 10px;
+  opacity: 0.75;
+  transition: .5s;
+  padding-bottom: 50px;
+  margin: 5vw;
+  height: auto;
+  margin-bottom: 50px;
+}
+
+header > div:hover{
+  opacity: .95;
+  padding-bottom: 25px;
+}
+
+header >div:hover > h3{
+  opacity: 1;
+  font-size: 3em;
+}
+
+header:hover > div > h1{
+  font-size: 5em;
+}
+
+header > a > img:hover + h2{
+  opacity: 1;
+  font-size: 1.25em;
+}
+
+
+header > div > h1{
+  font-family: 'Consolas', cursive;
+  font-size: 3em;
+  padding-bottom: 5px;
+  margin-bottom: 0px;
+  transition: .25s;
+  color: #1abc9c
+}
+
+header > div > h3{
+  font-family: 'Consolas', cursive;
+  font-size: 0em;
+  padding-bottom: 5px;
+  padding-top: 0px;
+  margin-top: 0px;
+  opacity: 0;
+  transition: .25s;
+  color: #1abc9c
+}
+
+header > a{
+  transition: .5s;
+}
+
+a{
+  text-decoration: none;
+}
+
+header > a > img{
+  height: 0px;
+  width: auto;
+  padding-top: 0px;
+  opacity: 0;
+  transition: .25s;
+  animation: pulse 3s infinite;
+}
+
+header > a > img:hover{
+  height: 175px;
+  opacity: 1;
+}
+
+header > a > h2{
+  font-family: 'Consolas', cursive;
+  font-size: 0em;
+  padding-bottom: 5px;
+  padding-top: 0px;
+  margin-top: 0px;
+  color: #1abc9c;
+  opacity: 0;
+  transition: .25s;
+}
+
+@media (max-width:  980px){
+
+  header{
+    filter: blur(0px) grayscale(0%);
+    height: 100vh;
+    width: 100vw;
+    margin-top: 0;
+    animation: huechange 5s infinite;
+  }
+
+  body{
+    background-color: #FFF;
+  }
+
+  header > a > img{
+    opacity: 0.5;
+    transition: .25s;
+    height: 150px;
+  }
+
+  header > div > h1{
+  font-size: 5em;
+  }
+
+}
+
+.overlay{
+  background-color: #FFF;
+  color: #1abc9c;
+  height: 0vh;
+  width: 0vw;
+  position: fixed;
+  z-index: 0;
+  padding: 0;
+  margin: 0;
+  top: 0px;
+  right: 0px;
+  animation: overlayview 1.5s; 
+  opacity: 0;
+}
+
+.overlay > h1{
+  padding: 0;
+  font-size: 5em;
+  margin: 0;
+  font-family: 'Consolas', cursive;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 45vh;
+  animation: bounceIn .75s;
+}
+
+.overlay > a > img{
+  height: 150px;
+  width: auto;
+  padding-top: 50px;
+  margin: auto;
+  display: block;
+  margin: auto;
+  animation: fadeInUp .75s;
+}

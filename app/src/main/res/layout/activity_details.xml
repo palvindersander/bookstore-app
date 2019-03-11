@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="5dp"
+    tools:context=".detailsActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:contentDescription="@string/app_name"
+        android:scaleType="center"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        android:src="@mipmap/ic_launcher_foreground" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_weight="0.5"
+        android:text="@string/enter_your_date_of_birth"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary" />
+
+    <DatePicker
+        android:id="@+id/datePicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_weight="0.5"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:text="@string/enter_these_details"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary" />
+
+    <EditText
+        android:id="@+id/yearGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:layout_weight="0.5"
+        android:autofillHints="@string/year_group"
+        android:hint="@string/year_group"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textSize="7.5pt" />
+
+    <EditText
+        android:id="@+id/formRoom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:layout_weight="0.5"
+        android:autofillHints="@string/form_room"
+        android:hint="@string/form_room"
+        android:inputType="text"
+        android:maxLength="5"
+        android:textAlignment="center"
+        android:textSize="7.5pt" />
+
+    <Button
+        android:id="@+id/submitData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="75dp"
+        android:layout_marginRight="75dp"
+        android:background="@color/colorPrimary"
+        android:onClick="submitData"
+        android:text="@string/submit"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>
