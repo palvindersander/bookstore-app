@@ -142,7 +142,6 @@ public class searchFragment extends Fragment {
                             ArrayList temp = (ArrayList) ratings.get(i);
                             int j = i - 1;
                             ArrayList nextArray = (ArrayList) ratings.get(j);
-
                             Double tempRating = Double.valueOf(temp.get(1).toString());
                             Double nextRating = Double.valueOf(nextArray.get(1).toString());
                             while (j >= 0 && nextRating > tempRating) {
@@ -154,6 +153,7 @@ public class searchFragment extends Fragment {
                         ArrayList<book> sorted = new ArrayList<>();
                         for (int i = ratings.size() - 1; i > -1; i--) {
                             sorted.add((book) ((ArrayList) ratings.get(i)).get(0));
+                            System.out.println((((ArrayList) ratings.get(i)).get(1)));
                         }
                         bookList = sorted;
                         initSearchBooksRecyclerView(view, bookList);
