@@ -153,7 +153,6 @@ public class searchFragment extends Fragment {
                         ArrayList<book> sorted = new ArrayList<>();
                         for (int i = ratings.size() - 1; i > -1; i--) {
                             sorted.add((book) ((ArrayList) ratings.get(i)).get(0));
-                            System.out.println((((ArrayList) ratings.get(i)).get(1)));
                         }
                         bookList = sorted;
                         initSearchBooksRecyclerView(view, bookList);

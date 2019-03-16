@@ -17,6 +17,7 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
@@ -83,10 +84,21 @@ public class logInActivity extends AppCompatActivity {
                     startActivity(intent);
                     finish();
                 } else {
-                    //go to home activity
-                    Intent intent = new Intent(logInActivity.this, homeActivity.class);
-                    startActivity(intent);
-                    finish();
+                    ArrayList<String> array = new ArrayList<>();
+                    array.add(task.getResult().get("dateOfBirth").toString());
+                    array.add(task.getResult().get("formRoom").toString());
+                    array.add(task.getResult().get("yearGroup").toString());
+                    if (Objects.equals(array.get(0), "") && array.get(1) == "" && array.get(2) == "") {
+                        //go to details activity
+                        Intent intent = new Intent(logInActivity.this, detailsActivity.class);
+                        startActivity(intent);
+                        finish();
+                    }else{
+                        //go to home activity
+                        Intent intent = new Intent(logInActivity.this, homeActivity.class);
+                        startActivity(intent);
+                        finish();
+                    }
                 }
             }
         });
